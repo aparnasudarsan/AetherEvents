@@ -1,0 +1,703 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Management</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Lora&display=swap" rel="stylesheet">
+  <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZYVtIKwvEvQ7l5T22pUcYmN65Nhu1SGGcnQ&s">
+  <style>
+    h1, h2, h3, .font-heading {
+      font-family: 'Playfair Display', serif;
+    }
+    body, input, label, button, p, a {
+      font-family: 'Lora', serif;
+    }
+  </style>
+</head>
+<body class="bg-white text-[#161515] font-lora">
+  <!--  Navigation Bar -->
+  <nav class="bg-[#161516] text-white px-6 py-4 shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold font-heading text-[#ffffff]">AetherEvents</h1>
+      <ul class="flex space-x-6">
+        <li><a href="#Home" class="text-white hover:underline">Home</a></li>
+        <li><a href="./login.html" class="text-white hover:underline">Login</a></li>
+        <li><a href="./register.html" class="text-white hover:underline">Registration</a></li>
+        <li><a href="./booking.html" class="text-white hover:underline">Booking</a></li>
+        <li><a href="#contact" class="text-white hover:underline">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!--  Intro -->
+  <marquee behavior="scroll" direction="left" scrollamount="6" class="text-lg text-[#814646]">
+  Your Perfect Event, Seamlessly Planned We help you plan weddings, birthdays, corporate gatherings, and more with full-service event management that's elegant, efficient, and personalized - 💒 Celebrate Love with Us 
+</marquee>
+<section class="py-0 bg-gradient-to-b from-[#fdf6f0] to-white">
+  <h2 class="text-center text-4xl font-heading py-8 text-[#814646] tracking-wide">Explore Our Events</h2>
+  <div class="w-full overflow-x-auto scroll-smooth snap-x snap-mandatory border-y border-[#cccccc] shadow-lg">
+    <div class="flex w-full">
+      <!--  Slide 1 -->
+      <div class="flex-shrink-0 w-full snap-center h-[80vh] relative group transition-transform duration-500 ease-in-out">
+        <img src="https://media.architecturaldigest.com/photos/57d6ea905508d30f61ffc06a/16:9/w_2287,h_1286,c_limit/1-Diner-en-Blanc-2015-Charleston-photo-Jennifer-Heffner-777A3507.jpg"
+             alt="Birthday Event"
+             class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-50 transition duration-300"></div>
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 bg-[#814646cc] text-white px-6 py-3 rounded-full font-lora text-xl shadow-md">
+          Birthday Parties
+        </div>
+      </div>
+      <!--  Slide 2 -->
+      <div class="flex-shrink-0 w-full snap-center h-[80vh] relative group transition-transform duration-500 ease-in-out">
+        <img src="https://lirp.cdn-website.com/28cd0bb4/dms3rep/multi/opt/traditional+american+wedding-1920w.jpeg"
+             alt="Wedding Event"
+             class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-50 transition duration-300"></div>
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 bg-[#814646cc] text-white px-6 py-3 rounded-full font-lora text-xl shadow-md">
+          Wedding Ceremonies
+        </div>
+      </div>
+      <!--  Slide 3 -->
+      <div class="flex-shrink-0 w-full snap-center h-[80vh] relative group transition-transform duration-500 ease-in-out">
+        <img src="https://www.littlebigparty.co.uk/cdn/shop/collections/ted-105_1_1-2.jpg?v=1707401603&width=1080"
+             alt="Baby shower"
+             class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-50 transition duration-300"></div>
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 bg-[#814646cc] text-white px-6 py-3 rounded-full font-lora text-xl shadow-md">
+          Baby shower
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="text-center text-sm mt-4 text-[#814646] italic">Swipe to explore our events</p>
+</section>
+<section class="bg-[#fdf6f6] text-[#161515] py-16 px-6 md:px-12">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-4xl font-heading text-[#814646] mb-4">About AetherEvents</h2>
+    <p class="text-lg font-content leading-relaxed">
+      At <strong>AetherEvents</strong>, we believe in creating unforgettable moments. Whether you're planning a romantic wedding, a vibrant birthday party, or a professional corporate event — our team of experts brings elegance, creativity, and precision to every celebration.
+    </p>
+    <p class="text-lg font-content mt-4">
+      From venue styling and entertainment to catering and photography, we handle every detail so you can enjoy your special day stress-free. Let us turn your vision into a timeless memory.
+    </p>
+    <a href="booking.html" class="inline-block mt-8 px-6 py-3 bg-[#675353] text-white rounded-md hover:bg-[#814646] transition duration-300">
+      Start Planning with Us →
+    </a>
+  </div>
+</section>
+   <!--  Services Grid -->
+  <section class="py-16 bg-white border-y border-[#cccccc]">
+    <h2 class="text-3xl text-center font-heading text-[#814646] mb-10">What We Offer</h2>
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
+      <!-- Service Card -->
+      <div class="bg-[#675353] text-white rounded-lg overflow-hidden shadow-md transform hover:scale-105 transition">
+        <img src="https://images.pexels.com/photos/313707/pexels-photo-313707.jpeg" class="h-48 w-full object-cover" />
+        <div class="p-5">
+          <h3 class="text-xl font-heading mb-2">Wedding Planning</h3>
+          <p>Elegant setups, vendor coordination, and seamless ceremonies.</p>
+        </div>
+      </div>
+      <div class="bg-[#675353] text-white rounded-lg overflow-hidden shadow-md transform hover:scale-105 transition">
+        <img src="https://images.pexels.com/photos/2072181/pexels-photo-2072181.jpeg" class="h-48 w-full object-cover" />
+        <div class="p-5">
+          <h3 class="text-xl font-heading mb-2">Birthday Parties</h3>
+          <p>Fun, themed celebrations for kids and adults alike.</p>
+        </div>
+      </div>
+      <div class="bg-[#675353] text-white rounded-lg overflow-hidden shadow-md transform hover:scale-105 transition">
+        <img src="https://images.pexels.com/photos/1181304/pexels-photo-1181304.jpeg" class="h-48 w-full object-cover" />
+        <div class="p-5">
+          <h3 class="text-xl font-heading mb-2">Corporate Events</h3>
+          <p>Professional events including meetings, launches, and more.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+ <!-- 🔹 Upcoming Events -->
+<section class="py-16 bg-white">
+  <h2 class="text-center text-3xl font-heading text-[#814646] mb-10">Upcoming Events</h2>
+  <div class="overflow-x-auto px-6">
+    <div class="flex space-x-6 w-max mx-auto">
+
+      <!--  Wedding Gala -->
+      <a href="weddinggala.html" class="min-w-[260px] block bg-white border border-[#cccccc] p-4 rounded shadow-md hover:shadow-xl transform hover:scale-105 transition duration-300">
+        <div class="overflow-hidden rounded mb-3">
+          <img src="https://images.pexels.com/photos/169190/pexels-photo-169190.jpeg"
+               class="h-44 w-full object-cover rounded hover:scale-110 transition-transform duration-300"
+               alt="Wedding Gala">
+        </div>
+        <h3 class="font-bold text-xl font-heading text-[#814646]">Wedding Gala</h3>
+        <p class="text-sm text-[#161515]">August 25, 2025</p>
+        <p class="text-sm text-[#675353] mt-2">An elegant celebration of love and togetherness.</p>
+      </a>
+
+      <!--  Photography Expo -->
+      <a href="expo.html" class="min-w-[260px] block bg-white border border-[#cccccc] p-4 rounded shadow-md hover:shadow-xl transform hover:scale-105 transition duration-300">
+        <div class="overflow-hidden rounded mb-3">
+          <img src="https://images.pexels.com/photos/274973/pexels-photo-274973.jpeg"
+               class="h-44 w-full object-cover rounded hover:scale-110 transition-transform duration-300"
+               alt="Photography Expo">
+        </div>
+        <h3 class="font-bold text-xl font-heading text-[#814646]">Photography Expo</h3>
+        <p class="text-sm text-[#161515]">September 10, 2025</p>
+        <p class="text-sm text-[#675353] mt-2">Explore world-class photography gear and talent.</p>
+      </a>
+
+      <!--  Birthday Bash -->
+      <a href="bash.html" class="min-w-[260px] block bg-white border border-[#cccccc] p-4 rounded shadow-md hover:shadow-xl transform hover:scale-105 transition duration-300">
+        <div class="overflow-hidden rounded mb-3">
+          <img src="https://images.pexels.com/photos/1303084/pexels-photo-1303084.jpeg"
+               class="h-44 w-full object-cover rounded hover:scale-110 transition-transform duration-300"
+               alt="Birthday Bash">
+        </div>
+        <h3 class="font-bold text-xl font-heading text-[#814646]">Birthday Bash</h3>
+        <p class="text-sm text-[#161515]">September 20, 2025</p>
+        <p class="text-sm text-[#675353] mt-2">A joyful, colorful party for all age groups!</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+</section>
+<!-- 🔹 Event Types -->
+<section class="py-16 bg-white">
+  <h2 class="text-3xl font-heading text-center text-[#814646] mb-10">We Cover All Events</h2>
+  <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-6">
+
+    <!-- 🎉 Birthday Parties -->
+    <div class="flex flex-col justify-between p-5 bg-[#F9F4F4] rounded-lg border border-[#cccccc] shadow-sm hover:shadow-md transition">
+      <div class="flex items-center justify-between">
+        <div>
+          <h3 class="text-xl font-bold text-[#814646]">🎉 Birthday Parties</h3>
+          <p class="text-sm mt-1">Fun-filled birthday planning</p>
+        </div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCCssUeXbI4RnfnYEilbBGTBNxZwA5Eysk_A&s" class="h-20 w-20 object-cover rounded-full border-4 border-[#cccccc]" />
+      </div>
+      <a href="./birthday.html" class="mt-4 text-sm text-[#814646] underline hover:text-[#292323] self-start">Learn More →</a>
+    </div>
+    <!-- 💒 Weddings -->
+    <div class="flex flex-col justify-between p-5 bg-[#F9F4F4] rounded-lg border border-[#cccccc] shadow-sm hover:shadow-md transition">
+      <div class="flex items-center justify-between">
+        <div>
+          <h3 class="text-xl font-bold text-[#814646]">💒 Weddings</h3>
+          <p class="text-sm mt-1">Dream weddings & ceremonies</p>
+        </div>
+        <img src="https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg" class="h-20 w-20 object-cover rounded-full border-4 border-[#cccccc]" />
+      </div>
+      <a href="./wedding.html" class="mt-4 text-sm text-[#814646] underline hover:text-[#292323] self-start">Learn More →</a>
+    </div>
+    <!-- 💼 Corporate Events -->
+    <div class="flex flex-col justify-between p-5 bg-[#F9F4F4] rounded-lg border border-[#cccccc] shadow-sm hover:shadow-md transition">
+      <div class="flex items-center justify-between">
+        <div>
+          <h3 class="text-xl font-bold text-[#814646]">💼 Corporate Events</h3>
+          <p class="text-sm mt-1">Conferences & business meets</p>
+        </div>
+        <img src="https://thumbs.dreamstime.com/b/millennial-black-businesswoman-addressing-colleagues-corporate-business-meeting-close-up-153629913.jpg" class="h-20 w-20 object-cover rounded-full border-4 border-[#cccccc]" />
+      </div>
+      <a href="./corporate.html" class="mt-4 text-sm text-[#814646] underline hover:text-[#292323] self-start">Learn More →</a>
+    </div>
+    <!-- 📸 Photography -->
+    <div class="flex flex-col justify-between p-5 bg-[#F9F4F4] rounded-lg border border-[#cccccc] shadow-sm hover:shadow-md transition">
+      <div class="flex items-center justify-between">
+        <div>
+          <h3 class="text-xl font-bold text-[#814646]">📸 Photography</h3>
+          <p class="text-sm mt-1">Capture your perfect moments</p>
+        </div>
+        <img src="https://academy-cdn.wedio.com/2021/08/christian-wiediger-gVbOF8mdE3U-unsplash.jpg" class="h-20 w-20 object-cover rounded-full border-4 border-[#cccccc]" />
+      </div>
+      <a href="./photography.html" class="mt-4 text-sm text-[#814646] underline hover:text-[#292323] self-start">Learn More →</a>
+    </div>
+    <!-- 🎓 Workshop -->
+<div class="flex flex-col justify-between p-5 bg-[#F9F4F4] rounded-lg border border-[#cccccc] shadow-sm hover:shadow-md transition md:col-span-2 mx-auto w-full md:w-1/2">
+  <div class="flex items-center justify-between">
+    <div>
+      <h3 class="text-xl font-bold text-[#814646]">🎓 Workshop</h3>
+      <p class="text-sm mt-1">Engage, learn, and grow with experts</p>
+    </div>
+    <img src="https://guerric.co.uk/wp-content/uploads/2022/11/running-workshop-650x433.jpg" class="h-20 w-20 object-cover rounded-full border-4 border-[#cccccc]" />
+  </div>
+  <a href="./workshop.html" class="mt-4 text-sm text-[#814646] underline hover:text-[#292323] self-start">Learn More →</a>
+</div>
+  </div>
+</section>
+    <!-- body image section -->
+   <section id="contact" class="w-full h-screen bg-cover bg-center bg-no-repeat bg-[url('bgimg.jpg')] flex items-center justify-center">
+  <h1 class="text-white text-6xl md:text-8xl font-serif text-center">
+    LET'S <br /> CONNECT
+  </h1>
+</section>
+    <section class="bg-[#fdf8f0] px-6 py-16">
+      <div class="max-w-5xl mx-auto text-center">
+        <p class="text-sm tracking-widest text-[#4a2b2b] uppercase mb-3">Get in
+          Touch</p>
+        <h2
+          class="text-4xl md:text-5xl font-serif font-normal text-[#1a1a1a]">TELL
+          US MORE ABOUT YOUR EVENT</h2>
+      </div>
+      <form
+        class="max-w-5xl mx-auto mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 text-[#4a2b2b]">
+        <!-- First Name -->
+        <div>
+          <label class="block text-sm font-semibold uppercase mb-1">First Name
+            *</label>
+          <input type="text" placeholder="John"
+            class="w-full bg-transparent border-b border-[#ccc] focus:outline-none py-2 text-[#1a1a1a]" />
+        </div>
+        <!-- Last Name -->
+        <div>
+          <label class="block text-sm font-semibold uppercase mb-1">Last Name
+            *</label>
+          <input type="text" placeholder="Doe"
+            class="w-full bg-transparent border-b border-[#ccc] focus:outline-none py-2 text-[#1a1a1a]" />
+        </div>
+        <!-- Phone -->
+        <div>
+          <label
+            class="block text-sm font-semibold uppercase mb-1">Phone</label>
+          <input type="text" placeholder="+1 (234) 567 890"
+            class="w-full bg-transparent border-b border-[#ccc] focus:outline-none py-2 text-[#1a1a1a]" />
+        </div>
+        <!-- Email -->
+        <div>
+          <label class="block text-sm font-semibold uppercase mb-1">Email
+            *</label>
+          <input type="email" placeholder="example@mail.com"
+            class="w-full bg-transparent border-b border-[#ccc] focus:outline-none py-2 text-[#1a1a1a]" />
+        </div>
+        <!-- Event Date -->
+        <div>
+          <label class="block text-sm font-semibold uppercase mb-1">Event Date
+            *</label>
+          <input type="text" placeholder="Date"
+            class="w-full bg-transparent border-b border-[#ccc] focus:outline-none py-2 text-[#1a1a1a]" />
+        </div>
+        <!-- Location -->
+        <div>
+          <label
+            class="block text-sm font-semibold uppercase mb-1">Location</label>
+          <input type="text" placeholder="Enter Your Event Location"
+            class="w-full bg-transparent border-b border-[#ccc] focus:outline-none py-2 text-[#1a1a1a]" />
+        </div>
+        <!-- Message (Full width) -->
+        <div class="md:col-span-2">
+          <label class="block text-sm font-semibold uppercase mb-1">Message
+            *</label>
+          <textarea placeholder="Tell Us More About your Event" rows="3"
+            class="w-full bg-transparent border-b border-[#ccc] focus:outline-none py-2 text-[#1a1a1a]"></textarea>
+        </div>
+      </form>
+      <div class="md:col-span-2 mt-6 text-center">
+        <button type="submit"
+          class="bg-[#4a2b2b] text-white px-6 py-3 rounded-lg hover:bg-[#3a1f1f] transition duration-300">
+          
+          Submit
+        </button>
+      </div>
+    </section>
+    <!-- our packages -->
+    <section class="bg-[#fdf8f0] px-6 py-16">
+      <div class="max-w-5xl mx-auto text-center mb-20">
+        <h2
+          class="text-4xl md:text-5xl font-serif font-normal text-[#1a1a1a]">OUR
+          PACKAGES</h2>
+      </div>
+      <div class="flex justify-between gap-20 ">
+        <div
+          class="col border border-gray-200 p-5 transition transform hover:scale-101">
+          <h2
+            class="text-4xl md:text-6xl font-serif font-normal text-[#1a1a1a]">$1550<span
+              class="text-2xl text-gray-700">/package</span></h2>
+          <p class="text-gray-500 my-3">HALF DAY OF COORDINATION</p>
+          <p class="text-gray-700">This is perfect for those who've planned the
+            details and need support and point of contact on the day of the
+            event for half day with max 7 hours.</p>
+          <img src="./PROJECT/image/pkg1.jpg" alt class="w-100 h-60 rounded-lg my-5">
+          <ul
+            class="space-y-3 text-gray-700 list-disc list-inside leading-relaxed">
+            <li>
+              <strong>Complimentary Consultation Call:</strong> Introductory
+              call to discuss your wedding details and understand your vision.
+            </li>
+            <li>
+              <strong>Initial Planning Touch-Point:</strong> 30-minute call to
+              gather essential logistics and introduce our process.
+            </li>
+            <li>
+              <strong>Month-of Guidance:</strong> Final planning call to confirm
+              all event details for flawless execution.
+            </li>
+            <li>
+              <strong>Personalized Dashboard:</strong> Access to documents,
+              timelines, and planning tools in one place.
+            </li>
+            <li>
+              <strong>On-Site Wedding Coordinator:</strong> A dedicated team
+              managing full event execution and troubleshooting.
+            </li>
+            <li>
+              <strong>Day Of Execution:</strong> Acting as the main contact for
+              vendors to keep everything on track.
+            </li>
+            <li>
+              <strong>Vendor Coordination:</strong> Ensuring all vendors follow
+              the schedule and collaborate seamlessly.
+            </li>
+            <li>
+              <strong>Family Point of Contact:</strong> We support family
+              members and assist with logistics questions.
+            </li>
+            <li>
+              <strong>Guest Welcome:</strong> Greeting and guiding guests for a
+              smooth and warm celebration start.
+            </li>
+            <li>
+              <strong>Setup or Take Down Management:</strong> Supervision to
+              follow your checklist within the scheduled hours.
+            </li>
+            <li>
+              <strong>Guest Issue Troubleshooting:</strong> Discreetly solving
+              any unexpected situations for a stress-free day.
+            </li>
+          </ul>
+          <button type= "submit"
+            class="bg-[#4a2b2b] text-white px-6 py-3 rounded-lg hover:bg-[#3a1f1f] transition duration-300  ml-30 mt-20 ">
+            Get Started
+          </button>
+        </div>
+        <div
+          class="col border border-gray-200 p-5 transition transform hover:scale-101">
+          <h2
+            class="text-4xl md:text-6xl font-serif font-normal text-[#1a1a1a]">$2000<span
+              class="text-2xl text-gray-700">/package</span></h2>
+          <p class="text-gray-500 my-3">JUST DAY OF COORDINATION</p>
+          <p class="text-gray-700">This is perfect for those who've planned the
+            details and need a point of contact for the day of the event with no
+            rehearsal with max 12 hours.</p>
+          <img src="./PROJECT/image/pkg2.jpg" alt class="w-100 h-60 rounded-lg my-5">
+          <ul
+            class="space-y-4 text-gray-700 list-disc list-inside leading-relaxed">
+            <li>
+              <strong>Complimentary Consultation Call:</strong>
+              An introductory call to discuss your wedding details, understand
+              your vision, and determine how we can support you best.
+            </li>
+            <li>
+              <strong>Initial Planning Touch-Point:</strong>
+              A 30-minute call to gather essential wedding day logistics and
+              introduce our process.
+            </li>
+            <li>
+              <strong>Month-of Guidance:</strong>
+              Final planning call to ensure all details are set and your event
+              is ready for flawless execution.
+            </li>
+            <li>
+              <strong>Personalized Dashboard:</strong>
+              Access to a centralized dashboard with helpful documents,
+              timelines, and planning tools.
+            </li>
+            <li>
+              <strong>On-Site Wedding Coordinator:</strong>
+              A dedicated team present on your wedding day for complete event
+              execution and troubleshooting.
+            </li>
+            <li>
+              <strong>Day Of Execution:</strong>
+              We'll serve as the main contact for all your vendors to ensure
+              everything runs on time and as planned.
+            </li>
+            <li>
+              <strong>Vendor Coordination:</strong>
+              Ensuring all vendors are aligned with the timeline and working
+              seamlessly together.
+            </li>
+            <li>
+              <strong>Officiant Coordination:</strong>
+              Collaborating with the officiant to align on timing and performing
+              a sound check.
+            </li>
+            <li>
+              <strong>DJ Coordination:</strong>
+              Coordinating ceremony music including the processional,
+              recessional, and grand entrances.
+            </li>
+          </ul>
+          <button type="submit"
+            class="bg-[#4a2b2b] text-white px-6 py-3 rounded-lg hover:bg-[#3a1f1f] transition duration-300  ml-30 mt-10 ">
+            Get Started
+          </button>
+        </div>
+        <div
+          class="col border border-gray-200 p-5 transition transform hover:scale-101">
+          <h2
+            class="text-4xl md:text-6xl font-serif font-normal text-[#1a1a1a]">$2300<span
+              class="text-2xl text-gray-700">/package</span></h2>
+          <p class="text-gray-500 my-3">DAY OF COORDINATION</p>
+          <p class="text-gray-700">This is perfect for those who've planned the
+            details, have family support and just need a pro for the day of to
+            make it happen wirh rehearsal support.</p>
+          <img src="./PROJECT/image/pkg3.jpg" alt class="w-100 h-60 rounded-lg my-5">
+          <ul
+            class="space-y-4 text-gray-700 list-disc list-inside leading-relaxed">
+            <li>
+              <strong>Complimentary Consultation Call:</strong>
+              An introductory call to discuss your wedding details, understand
+              your vision, and determine how we can support you best.
+            </li>
+            <li>
+              <strong>Initial Onboarding Call:</strong>
+              A personalized planning call to get acquainted, understand
+              priorities, and gather key details.
+            </li>
+            <li>
+              <strong>Six-Month Check-In:</strong>
+              A progress check to ensure your plans are aligning with your
+              vision and nothing is falling through the cracks.
+            </li>
+            <li>
+              <strong>Three-Month Check-In:</strong>
+              A strategic checkpoint to review vendor bookings, timeline flow,
+              and prepare for final planning stages.
+            </li>
+            <li>
+              <strong>Month-of Check-In:</strong>
+              Final planning call to ensure all details are set and your event
+              is ready for flawless execution.
+            </li>
+            <li>
+              <strong>Personalized Dashboard:</strong>
+              Access to a centralized dashboard with helpful documents,
+              timelines, and planning tools.
+            </li>
+            <li>
+              <strong>Timeline Review:</strong>
+              Review of the full wedding timeline from setup to takedown to
+              ensure smooth flow and coordination.
+            </li>
+            <li>
+              <strong>Floor Plan Review:</strong>
+              Evaluation of your existing floor plan to make sure it fits the
+              venue layout and guest comfort.
+            </li>
+            <li>
+              <strong>One-Hour Wedding Rehearsal:</strong>
+              On-site coordination of the rehearsal to ensure everyone
+              understands their roles and flow of the ceremony.
+            </li>
+          </ul>
+          <button type="submit"
+            class="bg-[#4a2b2b] text-white px-6 py-3 rounded-lg hover:bg-[#3a1f1f] transition duration-300  ml-30 mt-10">
+            Get Started
+          </button> 
+        </div>
+      </div>
+    </section>
+    <!-- add on services -->
+    <section class="bg-[#fdf8f0] px-6 py-16">
+      <div class="max-w-5xl mx-auto text-center mb-20">
+        <h2
+          class="text-4xl md:text-5xl font-serif font-normal text-[#1a1a1a]">OUR
+          PACKAGES</h2>
+      </div>
+      <div class="flex gap-20">
+        <div class="col p-10 border border-gray-300 hover:border-gray-700 w-1/2">
+          <img src="./PROJECT/image/addon1.jpg" alt="" class="w-150 h-100">
+          <p class="uppercase text-2xl p-5">Planning/Coordinating virtual event - 2 hour</p>
+          <button type="submit"
+          class="bg-[#4a2b2b] text-white px-6 py-3 ml-10 hover:bg-[#3a1f1f] transition duration-300 w-130">
+          LET'S TALK
+        </button>
+        </div>
+        <div class="col p-10 border border-gray-300 hover:border-gray-700 w-1/2">
+          <img src="./PROJECT/image/addon2.jpg" alt="" class="w-150 h-100 ">
+          <p class="uppercase text-2xl p-5">Ceremony Rehearsal and Rehearsal Dinner Planning - 5 hour</p>
+          <button type="submit"
+          class="bg-[#4a2b2b] text-white px-6 py-3 ml-10 hover:bg-[#3a1f1f] transition duration-300 w-130">
+          LET'S TALK
+        </button>
+        </div>
+      </div>
+      <div class="flex gap-20 my-10">
+        <div class="col p-10 border border-gray-300 hover:border-gray-700 w-1/2">
+          <img src="./PROJECT/image/addon3.jpg" alt="" class="w-150 h-100">
+          <p class="uppercase text-2xl p-5">Music assistance, Playlist management during your event</p>
+          <button type="submit"
+          class="bg-[#4a2b2b] text-white px-6 py-3 ml-10 hover:bg-[#3a1f1f] transition duration-300 w-130">
+          LET'S TALK
+        </button>
+        </div>
+        <div class="col p-10 border border-gray-300 hover:border-gray-700 w-1/2">
+          <img src="./PROJECT/image/addon4.jpg" alt="" class="w-150 h-100 ">
+          <p class="uppercase text-2xl p-5">Staffing - Server and Bartender</p>
+          <button type="submit"
+          class="bg-[#4a2b2b] text-white px-6 py-3 ml-10 hover:bg-[#3a1f1f] transition duration-300 w-130">
+          LET'S TALK
+        </button>
+        </div>
+      </div>
+      <div class="flex gap-20">
+        <div class="col p-10 border border-gray-300 hover:border-gray-700 w-1/2">
+          <img src="./PROJECT/image/addon5.jpg" alt="" class="w-150 h-100">
+          <p class="uppercase text-2xl p-5">Guest Management List & RSVP Management</p>
+          <button type="submit"
+          class="bg-[#4a2b2b] text-white px-6 py-3 ml-10 hover:bg-[#3a1f1f] transition duration-300 w-130">
+          LET'S TALK
+        </button>
+        </div>
+        <div class="col p-10 border border-gray-300 hover:border-gray-700 w-1/2">
+          <img src="./PROJECT/image/addon6.jpg" alt="" class="w-150 h-100 ">
+          <p class="uppercase text-2xl p-5">RENTALS DELIVERY</p>
+          <button type="submit"
+          class="bg-[#4a2b2b] text-white px-6 py-3 ml-10 hover:bg-[#3a1f1f] transition duration-300 w-130">
+          LET'S TALK
+        </button>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-white dark:bg-gray-900">
+      <div class="mx-auto w-full max-w-screen-xl">
+        <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
+          <div>
+            <h2
+              class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Company</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+              <li class="mb-4">
+                <a href="#" class=" hover:underline">About</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">Careers</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">Brand Center</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">Blog</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2
+              class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Help
+              center</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+              <li class="mb-4">
+                <a href="#" class="hover:underline">Discord Server
+                 </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">Twitter</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">Facebook</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2
+              class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+              <li class="mb-4">
+                <a href="#" class="hover:underline">Privacy Policy</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">Licensing</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2
+              class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Download</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+              <li class="mb-4">
+                <a href="#" class="hover:underline">iOS</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">Android</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">Windows</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">MacOS</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="px-4 py-6 bg-gray-100 dark:bg-gray-700 md:flex md:items-center  md:justify-between">
+          <span
+            class="text-sm text-gray-500 dark:text-gray-300 sm:text-center">©
+            2025 <a href="https://flowbite.com/">Aetherevents™</a>. All Rights
+            Reserved.
+          </span>
+          <div
+            class="flex mt-4 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
+            <a href="#"
+              class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+              <svg class="w-4 h-4" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                viewBox="0 0 8 19">
+                <path fill-rule="evenodd"
+                  d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
+                  clip-rule="evenodd" />
+              </svg>
+              <span class="sr-only">Facebook page</span>
+            </a>
+            <a href="#"
+              class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+              <svg class="w-4 h-4" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                viewBox="0 0 21 16">
+                <path
+                  d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z" />
+              </svg>
+              <span class="sr-only">Discord community</span>
+            </a>
+            <a href="#"
+              class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+              <svg class="w-4 h-4" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                viewBox="0 0 20 17">
+                <path fill-rule="evenodd"
+                  d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z"
+                  clip-rule="evenodd" />
+              </svg>
+              <span class="sr-only">Twitter page</span>
+            </a>
+            <a href="#"
+              class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+              <svg class="w-4 h-4" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                viewBox="0 0 20 20">
+                <path fill-rule="evenodd"
+                  d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z"
+                  clip-rule="evenodd" />
+              </svg>
+              <span class="sr-only">GitHub account</span>
+            </a>
+            <a href="#"
+              class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+              <svg class="w-4 h-4" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                viewBox="0 0 20 20">
+                <path fill-rule="evenodd"
+                  d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z"
+                  clip-rule="evenodd" />
+              </svg>
+              <span class="sr-only">Dribbble account</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>
